@@ -1,0 +1,41 @@
+{
+  "name": "@react-grab/remix-feedback",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
+    "lint": "tsc --noEmit",
+    "preview": "remix-serve ./build/server/index.js",
+    "start": "remix-serve ./build/server/index.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.18.0",
+    "@remix-run/node": "^2.12.1",
+    "@remix-run/react": "^2.12.1",
+    "@remix-run/serve": "^2.12.1",
+    "@remix-run/server-runtime": "^2.12.1",
+    "better-sqlite3": "^11.5.0",
+    "isbot": "^5.1.9",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-grab": "workspace:*"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.12.1",
+    "@remix-run/eslint-config": "^2.12.1",
+    "@remix-run/vite": "^2.12.1",
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "prisma": "^5.18.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.9"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
