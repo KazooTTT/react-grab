@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+enum FeedbackStatus {
+  PENDING
+  IN_PROGRESS
+  RESOLVED
+  INVALID
+}
+
+model Feedback {
+  id            String         @id @default(cuid())
+  status        FeedbackStatus @default(PENDING)
+  pageUrl       String
+  selector      String
+  elementLabel  String
+  componentName String?
+  htmlPreview   String
+  context       String
+  feedbackText  String
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
